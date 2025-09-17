@@ -20,12 +20,13 @@ def main():
             except ValueError:
                 print(message(1))
                 continue
+
             if not choice in [1,2,3]:
                 print(message(1))
                 continue
 
 
-            if choice == 1:
+            elif choice == 1:
                 try:
                     n = float(input("What value to deposit: "))
                 except ValueError:
@@ -34,7 +35,7 @@ def main():
                 deposit(n)
                 balance = write_csv(balance, id_code)
 
-            if choice == 2:
+            elif choice == 2:
                 try:
                     n = float(input("What value to withdraw: "))
                 except ValueError:
@@ -43,11 +44,9 @@ def main():
                 withdraw(n)
                 balance = write_csv(balance, id_code)
 
-            if choice == 3:
+            elif choice == 3:
                 print(message(3))
                 break
-            else:
-                continue
 
 
 def account():
